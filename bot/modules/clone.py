@@ -37,7 +37,7 @@ async def rcloneNode(client, message, link, dst_path, rcf, tag):
         link = link.split('mrcc:', 1)[1]
         config_path = f'wcl/{message.from_user.id}.conf'
     else:
-        config_path = 'wcl/.conf'
+        config_path = 'wcl.conf'
 
     if not await aiopath.exists(config_path):
         await sendMessage(message, f"<b>RClone Config:</b> {config_path} not Exists!")
